@@ -1,0 +1,289 @@
+/* 
+Budget Tracker - Visual Design Challenge Week 3
+Color Palette:
+- Primary: #2C3E50 (Dark Blue - headings, table header)
+- Secondary: #3498DB (Bright Blue - buttons, accents)
+- Background: #F4F6F8 (Light Gray)
+- Card: #FFFFFF (White)
+- Text: #34495E (Dark Gray)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F6F8;
+    color: #34495E;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+/* Typography - Google Fonts */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2C3E50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p, label, input, select, td, th, button {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* CSS Box Model - Cards */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E8EB;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+}
+
+/* Page Header Card */
+.page-header {
+    text-align: center;
+    background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+    border: none;
+    padding: 40px 28px;
+}
+
+.page-header h1 {
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    color: #D6EAF8;
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+/* Form Styling */
+.form-section h2 {
+    border-bottom: 2px solid #F4F6F8;
+    padding-bottom: 12px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #2C3E50;
+    margin-bottom: 6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #D5DBDB;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #FFFFFF;
+    color: #2C3E50;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498DB;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+input::placeholder {
+    color: #95A5A6;
+}
+
+/* Button Styling */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #3498DB;
+    color: #FFFFFF;
+    padding: 13px 28px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #2980B9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.btn-danger {
+    background-color: #FDEDEC;
+    color: #E74C3C;
+    border: 1px solid #F5B7B1;
+}
+
+.btn-danger:hover {
+    background-color: #E74C3C;
+    color: #FFFFFF;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+/* Expense Table Styling */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #F4F6F8;
+    padding-bottom: 12px;
+}
+
+.table-header h2 {
+    margin-bottom: 0;
+    border: none;
+    padding: 0;
+}
+
+.total-badge {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #E5E8EB;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #2C3E50;
+}
+
+th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #ECF0F1;
+    font-size: 0.95rem;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #F8F9F9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+tbody tr:hover {
+    background-color: #EBF5FB;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Category Badges */
+.category {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.category.food {
+    background-color: #D5F5E3;
+    color: #1E8449;
+}
+
+.category.transport {
+    background-color: #D6EAF8;
+    color: #1A5276;
+}
+
+.category.utilities {
+    background-color: #FCF3CF;
+    color: #7D6608;
+}
+
+.category.entertainment {
+    background-color: #FADBD8;
+    color: #943126;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .card {
+        padding: 20px;
+    }
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
